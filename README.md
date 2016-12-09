@@ -49,3 +49,10 @@ pub  4096R/3DA2BCE3 2016-02-18 Tarsnap source code signing key (Colin Percival) 
 >
 > although you will need to remove spaces in the fingerprint in
 > order to search for that string.
+
+
+## Debian packaging
+
+To create the source .deb package:
+
+    cd deb/tarsnap-archive-keyring && debuild -S -us -uc

@@ -1,0 +1,13 @@
+Source: tarsnap-archive-keyring
+Section: misc
+Priority: extra
+Maintainer: Graham Percival <gperciva@tarsnap.com>
+Build-Depends: debhelper (>= 9), gnupg
+Standards-Version: 3.9.5
+
+Package: tarsnap-archive-keyring
+Architecture: all
+Depends: gpgv, ${misc:Depends}
+Recommends: gnupg
+Description: Tarsnap Backup Inc. archive keyring
+ Signing keys for Tarsnap Backup Inc. source code and .deb packages.
