@@ -55,4 +55,4 @@ pub  4096R/3DA2BCE3 2016-02-18 Tarsnap source code signing key (Colin Percival) 
 
 To create the source .deb package:
 
-    cd deb/tarsnap-archive-keyring && debuild -S -us -uc
+    dpkg-source -b deb/tarsnap-archive-keyring
