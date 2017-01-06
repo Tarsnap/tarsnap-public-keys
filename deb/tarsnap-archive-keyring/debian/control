@@ -1,7 +1,7 @@
 Source: tarsnap-archive-keyring
 Section: misc
 Priority: extra
-Maintainer: Graham Percival <gperciva@tarsnap.com>
+Maintainer: Tarsnap .deb packages <pkg-deb@tarsnap.com>
 Build-Depends: debhelper (>= 9), gnupg
 Standards-Version: 3.9.5
 
