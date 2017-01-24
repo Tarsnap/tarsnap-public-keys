@@ -1,20 +1,19 @@
 all: tarsnap-archive-keyring.gpg tarsnap-code-signing-keyring.gpg tarsnap-experimental-keyring.gpg
 
+GPG=gpg --no-default-keyring
+
 # Create the keyring on the user's system, since the standard
 # ascii armoured export format is more stable than keyring files.
 tarsnap-archive-keyring.gpg:
-	gpg --no-default-keyring				\
-		--keyring ./tarsnap-archive-keyring.gpg		\
+	$(GPG)	--keyring ./tarsnap-archive-keyring.gpg		\
 		--import keys-packaging/tarsnap-deb-packaging-key-*.asc
 
 tarsnap-experimental-keyring.gpg:
-	gpg --no-default-keyring				\
-		--keyring ./tarsnap-experimental-keyring.gpg	\
+	$(GPG)	--keyring ./tarsnap-experimental-keyring.gpg	\
 		--import keys-packaging/tarsnap-EXPERIMENTAL-deb-packaging-key-*.asc
 
 tarsnap-code-signing-keyring.gpg:
-	gpg --no-default-keyring				\
-		--keyring ./tarsnap-code-signing-keyring.gpg	\
+	$(GPG)	--keyring ./tarsnap-code-signing-keyring.gpg	\
 		--import keys-signing/*.asc
 
 # Don't install the code-signing keyring to /etc/apt/trusted.gpg.d/
