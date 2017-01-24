@@ -1,6 +1,6 @@
 all: tarsnap-archive-keyring.gpg tarsnap-code-signing-keyring.gpg tarsnap-experimental-keyring.gpg
 
-GPG=gpg --no-default-keyring
+GPG=gpg --no-default-keyring --no-auto-check-trustdb
 
 # Create the keyring on the user's system, since the standard
 # ascii armoured export format is more stable than keyring files.
