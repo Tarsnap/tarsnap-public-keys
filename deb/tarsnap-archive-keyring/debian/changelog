@@ -1,3 +1,9 @@
+tarsnap-archive-keyring (0.3) unstable; urgency=medium
+
+  * Avoid producing "keybox" format with GPG 2.1 (used on Debian Stretch).
+
+ -- Tarsnap .deb packages <pkg-deb@tarsnap.com>  Tue, 24 Jan 2017 11:39:41 -0800
+
 tarsnap-archive-keyring (0.2) unstable; urgency=medium
 
   * Add 2017 code-signing and package-signing keys.
