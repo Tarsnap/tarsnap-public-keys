@@ -1,3 +1,9 @@
+tarsnap-archive-keyring (0.4) unstable; urgency=high
+
+  * Rotate the 2017 Tarsnap deb packaging key.
+
+ -- Tarsnap .deb packages <pkg-deb@tarsnap.com>  Sat, 04 Feb 2017 18:11:32 -0800
+
 tarsnap-archive-keyring (0.3) unstable; urgency=medium
 
   * Avoid producing "keybox" format with GPG 2.1 (used on Debian Stretch).
