@@ -1,3 +1,9 @@
+tarsnap-archive-keyring (0.5) unstable; urgency=medium
+
+  * Add 2018 code-signing and package-signing keys.
+
+ -- Tarsnap .deb packages <pkg-deb@tarsnap.com>  Thu, 06 Jul 2017 21:11:32 -0700
+
 tarsnap-archive-keyring (0.4) unstable; urgency=high
 
   * Rotate the 2017 Tarsnap deb packaging key.
