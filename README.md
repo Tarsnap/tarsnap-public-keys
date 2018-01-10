@@ -56,3 +56,14 @@ pub  4096R/3DA2BCE3 2016-02-18 Tarsnap source code signing key (Colin Percival) 
 To create the source .deb package:
 
     dpkg-source -b deb/tarsnap-archive-keyring
+
+This creates three keyrings:
+- tarsnap-code-signing-keyring.gpg: signatures for the official source tarball.
+- tarsnap-archive-keyring.gpg: signatures for the official `.deb` packages.
+- tarsnap-experimental-archive-keyring.gpg: signatures for experimental
+  packages.
+
+  This is *not* installed as a trusted `apt-get` keyring; if you want to
+  install experimental packages automatically with `apt-get`, copy this file
+  from `/usr/share/keyrings/` to `/etc/apt.d/trusted.gpg.d/` (and add the
+  relevant URL to `/etc/apt/sources.list.d/tarsnap.list`.

@@ -2,7 +2,7 @@ all: tarsnap-archive-keyring.gpg tarsnap-code-signing-keyring.gpg tarsnap-experi
 
 GPG=gpg --no-default-keyring --no-auto-check-trustdb
 
-# Create the keyring on the user's system, since the standard
+# Create the keyrings on the user's system, since the standard
 # ascii armoured export format is more stable than keyring files.
 tarsnap-archive-keyring.gpg:
 	$(GPG)	--keyring ./tarsnap-archive-keyring-temp.gpg		\
@@ -27,7 +27,8 @@ tarsnap-code-signing-keyring.gpg:
 	rm tarsnap-code-signing-keyring-temp.gpg			\
 		tarsnap-code-signing-keyring-temp.gpg~
 
-# Don't install the code-signing keyring to /etc/apt/trusted.gpg.d/
+# Don't install the code-signing or experimental keyrings to
+# /etc/apt/trusted.gpg.d/
 install: tarsnap-archive-keyring.gpg tarsnap-code-signing-keyring.gpg
 	install -d $(DESTDIR)/etc/apt/trusted.gpg.d/
 	install -d $(DESTDIR)/usr/share/keyrings/
