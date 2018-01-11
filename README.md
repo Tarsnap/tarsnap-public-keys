@@ -43,7 +43,7 @@ part is `3DA2BCE3` -- this lets you check it in the
 >
 > ```
 > $ gpg --with-fingerprint signing-keys/tarsnap-signing-key-2016.asc
-pub  4096R/3DA2BCE3 2016-02-18 Tarsnap source code signing key (Colin Percival) <cperciva@tarsnap.com>
+> pub  4096R/3DA2BCE3 2016-02-18 Tarsnap source code signing key (Colin Percival) <cperciva@tarsnap.com>
 >       Key fingerprint = ECAE BA77 D19D 1EE0 CAF1  628F BC5C FA09 3DA2 BCE3
 > ```
 >
