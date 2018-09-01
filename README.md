@@ -66,4 +66,4 @@ This creates three keyrings:
   This is *not* installed as a trusted `apt-get` keyring; if you want to
   install experimental packages automatically with `apt-get`, copy this file
   from `/usr/share/keyrings/` to `/etc/apt.d/trusted.gpg.d/` (and add the
-  relevant URL to `/etc/apt/sources.list.d/tarsnap.list`.
+  relevant URL to `/etc/apt/sources.list.d/tarsnap.list`).
