@@ -1,3 +1,9 @@
+tarsnap-archive-keyring (0.6) unstable; urgency=medium
+
+  * Add 2019 code-signing and package-signing keys.
+
+ -- Tarsnap .deb packages <pkg-deb@tarsnap.com>  Sat, 01 Sep 2018 23:33:32 -0700
+
 tarsnap-archive-keyring (0.5) unstable; urgency=medium
 
   * Add 2018 code-signing and package-signing keys.
