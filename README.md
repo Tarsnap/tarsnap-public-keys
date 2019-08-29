@@ -63,7 +63,7 @@ This creates three keyrings:
 - tarsnap-experimental-archive-keyring.gpg: signatures for experimental
   packages.
 
-  This is *not* installed as a trusted `apt-get` keyring; if you want to
-  install experimental packages automatically with `apt-get`, copy this file
-  from `/usr/share/keyrings/` to `/etc/apt.d/trusted.gpg.d/` (and add the
-  relevant URL to `/etc/apt/sources.list.d/tarsnap.list`).
+  The experimental keys are *not* installed as a trusted `apt-get` keyring;
+  they can be imported with:
+
+      sudo apt-key add /usr/share/keyrings/tarsnap-experimental-keyring.gpg
