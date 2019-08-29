@@ -58,12 +58,21 @@ To create the source .deb package:
     dpkg-source -b deb/tarsnap-archive-keyring
 
 This creates three keyrings:
-- tarsnap-code-signing-keyring.gpg: signatures for the official source tarball.
-- tarsnap-archive-keyring.gpg: signatures for the official `.deb` packages.
-- tarsnap-experimental-archive-keyring.gpg: signatures for experimental
+- `tarsnap-code-signing-keyring.gpg`: signatures for the official source
+  tarball.
+- `tarsnap-archive-keyring.gpg`: signatures for the official `.deb` packages.
+- `tarsnap-experimental-archive-keyring.gpg`: signatures for experimental
   packages.
 
-  This is *not* installed as a trusted `apt-get` keyring; if you want to
-  install experimental packages automatically with `apt-get`, copy this file
-  from `/usr/share/keyrings/` to `/etc/apt.d/trusted.gpg.d/` (and add the
-  relevant URL to `/etc/apt/sources.list.d/tarsnap.list`).
+  The experimental keys are *not* installed as a trusted `apt-get` keyring;
+  they can be imported with:
+
+      sudo apt-key add /usr/share/keyrings/tarsnap-experimental-keyring.gpg
+
+
+## Policy notes
+
+- Once a package is "stable", the version number should be the publication
+  date, following the pattern of many other `foo-archive-keyring` packages.
+  For example, the updated keyring in August 2019 (which added keys for the
+  year 2020) was version 2019.08.24.
