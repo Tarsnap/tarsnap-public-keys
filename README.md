@@ -67,3 +67,11 @@ This creates three keyrings:
   they can be imported with:
 
       sudo apt-key add /usr/share/keyrings/tarsnap-experimental-keyring.gpg
+
+
+## Policy notes
+
+- Once a package is "stable", the version number should be the publication
+  date, following the pattern of many other `foo-archive-keyring` packages.
+  For example, the updated keyring in August 2019 (which added keys for the
+  year 2020) was version 2019.08.24.
