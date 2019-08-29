@@ -58,9 +58,10 @@ To create the source .deb package:
     dpkg-source -b deb/tarsnap-archive-keyring
 
 This creates three keyrings:
-- tarsnap-code-signing-keyring.gpg: signatures for the official source tarball.
-- tarsnap-archive-keyring.gpg: signatures for the official `.deb` packages.
-- tarsnap-experimental-archive-keyring.gpg: signatures for experimental
+- `tarsnap-code-signing-keyring.gpg`: signatures for the official source
+  tarball.
+- `tarsnap-archive-keyring.gpg`: signatures for the official `.deb` packages.
+- `tarsnap-experimental-archive-keyring.gpg`: signatures for experimental
   packages.
 
   The experimental keys are *not* installed as a trusted `apt-get` keyring;
