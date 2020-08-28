@@ -1,3 +1,9 @@
+tarsnap-archive-keyring (2020.08.27) unstable; urgency=medium
+
+  * Add 2021 code-signing and package-signing keys.
+
+ -- Tarsnap .deb packages <pkg-deb@tarsnap.com>  Thu, 27 Aug 2019 16:25:16 -0700
+
 tarsnap-archive-keyring (2019.08.24) unstable; urgency=medium
 
   * Add 2020 code-signing and package-signing keys.
