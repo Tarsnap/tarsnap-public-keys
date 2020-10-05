@@ -53,11 +53,16 @@ part is `3DA2BCE3` -- this lets you check it in the
 
 ## Debian packaging
 
-To create the source .deb package:
+To create a `.dsc` file and a `.tar.gz` file:
 
     dpkg-source -b deb/tarsnap-archive-keyring
 
-This creates three keyrings:
+This can be done on FreeBSD with the `dpkg` package.
+
+Those files can then be processed into a binary `.deb` file with `pbuilder`,
+potentially on a separate (more secure) system.  The binary `.deb` will
+install three keyrings:
+
 - `tarsnap-code-signing-keyring.gpg`: signatures for the official source
   tarball.
 - `tarsnap-archive-keyring.gpg`: signatures for the official `.deb` packages.
