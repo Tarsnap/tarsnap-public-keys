@@ -1,0 +1,13 @@
+#!/bin/sh
+
+set -e
+
+etc_apt_trusted_keyring=/etc/apt/trusted.gpg.d/tarsnap-archive-keyring.gpg
+
+# If we're doing a purge and have a keyring in /etc/apt/trusted.gpg.d,
+# delete it.
+if [ "$1" = "purge" ] && [ -e "${etc_apt_trusted_keyring}" ]; then
+	rm -f "${etc_apt_trusted_keyring}"
+fi
+
+exit 0
