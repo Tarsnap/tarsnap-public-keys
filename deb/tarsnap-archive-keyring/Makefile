@@ -27,12 +27,8 @@ tarsnap-code-signing-keyring.gpg:
 	rm tarsnap-code-signing-keyring-temp.gpg			\
 		tarsnap-code-signing-keyring-temp.gpg~
 
-# Don't install the code-signing or experimental keyrings to
-# /etc/apt/trusted.gpg.d/
 install: tarsnap-archive-keyring.gpg tarsnap-code-signing-keyring.gpg
-	install -d $(DESTDIR)/etc/apt/trusted.gpg.d/
 	install -d $(DESTDIR)/usr/share/keyrings/
-	cp tarsnap-archive-keyring.gpg $(DESTDIR)/etc/apt/trusted.gpg.d/
 	cp tarsnap-archive-keyring.gpg $(DESTDIR)/usr/share/keyrings/
 	cp tarsnap-experimental-keyring.gpg $(DESTDIR)/usr/share/keyrings/
 	cp tarsnap-code-signing-keyring.gpg $(DESTDIR)/usr/share/keyrings/

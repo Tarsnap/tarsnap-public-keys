@@ -1,0 +1,13 @@
+#!/bin/sh
+
+set -e
+
+usr_share_keyring=/usr/share/keyrings/tarsnap-archive-keyring.gpg
+etc_apt_trusted_keyring=/etc/apt/trusted.gpg.d/tarsnap-archive-keyring.gpg
+
+# If we already have a keyring in /etc/apt/trusted.gpg.d, update it.
+if [ -e "${etc_apt_trusted_keyring}" ]; then
+	cp "${usr_share_keyring}" "${etc_apt_trusted_keyring}"
+fi
+
+exit 0
