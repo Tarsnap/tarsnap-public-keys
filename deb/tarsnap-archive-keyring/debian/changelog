@@ -1,3 +1,9 @@
+tarsnap-archive-keyring (2021.10.26) unstable; urgency=medium
+
+  * Add 2022 code-signing and package-signing keys.
+
+ -- Tarsnap .deb packages <pkg-deb@tarsnap.com>  Tue, 26 Oct 2021 19:50:32 -0700
+
 tarsnap-archive-keyring (2021.09.29) unstable; urgency=medium
 
   * Only copy keys to /etc/apt/trusted.gpg.d/ if there's already one there.
