@@ -1,6 +1,8 @@
 tarsnap-archive-keyring (2022.07.06) unstable; urgency=medium
 
   * Add 2023 code-signing and package-signing keys.
+  * Stop GPG from attempting to write to the default home directory; this
+    allows the package to be built inside pbuilder 0.220+.
 
  -- Tarsnap .deb packages <pkg-deb@tarsnap.com>  Wed, 06 Jul 2022 14:04:26 -0700
 
